@@ -1,3 +1,27 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h1>Contact list</h1>
 <table>
   <tr>
@@ -7,21 +31,13 @@
     <th>Phone number</th>
   </tr>
   <tr>
-    <td><%= @contact[0].first_name %></td>
-    <td><%= @contact[0].last_name %></td>
-    <td><%= @contact[0].email %></td>
-    <td><%= @contact[0].phone_number %></td>
+    <% @contact.each do |contact| %>
+    <td>
+      <%= contact.first_name %>
+    </td>
+    <td><%= contact.last_name %></td>
+    <td><%= contact.email %></td>
+    <td><%= contact.phone_number %></td>
   </tr>
-  <tr>
-    <td><%= @contact[1].first_name %></td>
-    <td><%= @contact[1].last_name %></td>
-    <td><%= @contact[1].email %></td>
-    <td><%= @contact[1].phone_number %></td>
-  </tr>
-  <tr>
-    <td><%= @contact[2].first_name %></td>
-    <td><%= @contact[2].last_name %></td>
-    <td><%= @contact[2].email %></td>
-    <td><%= @contact[2].phone_number %></td>
-  </tr>
+  <% end %>
 </table>

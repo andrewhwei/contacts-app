@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass'
 gem 'seed_dump'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
