@@ -1,0 +1,22 @@
+<h1>Contact list</h1>
+
+<a href="/contacts/new">Add a new contact</a>
+
+<table class="table table-striped">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone number</th>
+    <th>Contact Page</th>
+  </tr>
+  <tr>
+    <% @contact.each do |contact| %>
+    <td><%= contact.first_name %></td>
+    <td><%= contact.last_name %></td>
+    <td><%= contact.email %></td>
+    <td><%= contact.phone_number %></td>
+    <td><%= link_to "See #{contact.first_name} #{contact.last_name}'s page", "/contacts/#{contact.id}" %></td>
+  </tr>
+  <% end %>
+</table>
