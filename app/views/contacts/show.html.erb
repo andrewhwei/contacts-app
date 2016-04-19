@@ -3,17 +3,21 @@
 <table class="table table-striped">
   <tr>
     <th>First Name</th>
+    <th>Middle Name</th>
     <th>Last Name</th>
     <th>Email</th>
     <th>Phone number</th>
     <th>Last updated</th>
+    <th>Bio</th>
   </tr>
   <tr>
     <td><%= @contact.first_name %></td>
+    <td><%= @contact.middle_name %></td>
     <td><%= @contact.last_name %></td>
     <td><%= @contact.email %></td>
     <td><%= @contact.add_japanese_prefix %></td>
     <td><%= @contact.friendly_updated_at %></td>
+    <td><%= @contact.bio %></td>
   </tr>
 </table>
 
