@@ -32,4 +32,8 @@ class ContactsController < ApplicationController
     @contact.delete
     redirect_to "/contacts"
   end
+
+  def all_johns
+    @johns = Contact.find_johns
+  end
 end

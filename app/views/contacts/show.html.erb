@@ -1,4 +1,4 @@
-<h1><%= "#{@contact.first_name} #{@contact.last_name}" %>'s contact page</h1>
+<h1><%= @contact.full_name %>'s contact page</h1>
 
 <table class="table table-striped">
   <tr>
@@ -6,12 +6,14 @@
     <th>Last Name</th>
     <th>Email</th>
     <th>Phone number</th>
+    <th>Last updated</th>
   </tr>
   <tr>
     <td><%= @contact.first_name %></td>
     <td><%= @contact.last_name %></td>
     <td><%= @contact.email %></td>
-    <td><%= @contact.phone_number %></td>
+    <td><%= @contact.add_japanese_prefix %></td>
+    <td><%= @contact.friendly_updated_at %></td>
   </tr>
 </table>
 
