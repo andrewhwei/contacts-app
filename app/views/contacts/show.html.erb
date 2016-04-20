@@ -21,7 +21,7 @@
     <td><%= @contact.friendly_updated_at %></td>
     <td><%= @contact.bio %></td>
     <th><%= @contact.address %></th>
-    <th><%= @contact.get_coordinates(@contact.address) %></th>
+    <th><%= "[#{@contact.latitude}, #{@contact.longitude}]" %></th>
   </tr>
 </table>
 

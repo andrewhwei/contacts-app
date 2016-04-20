@@ -1,4 +1,4 @@
-<h1>Update <%= "#{@contact.first_name} #{@contact.last_name}'s" %> information</h1>
+<h1>Update <%= @contact.full_name %>'s information</h1>
 
 <%= form_tag "/contacts/#{@contact.id}", method: :patch do %>
 
