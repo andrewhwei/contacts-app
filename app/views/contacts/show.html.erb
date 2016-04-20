@@ -9,6 +9,8 @@
     <th>Phone number</th>
     <th>Last updated</th>
     <th>Bio</th>
+    <th>Address</th>
+    <th>Coordinates</th>
   </tr>
   <tr>
     <td><%= @contact.first_name %></td>
@@ -18,6 +20,8 @@
     <td><%= @contact.add_japanese_prefix %></td>
     <td><%= @contact.friendly_updated_at %></td>
     <td><%= @contact.bio %></td>
+    <th><%= @contact.address %></th>
+    <th><%= @contact.get_coordinates(@contact.address) %></th>
   </tr>
 </table>
 

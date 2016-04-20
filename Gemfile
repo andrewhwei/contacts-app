@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'geocoder'
 gem 'bootstrap-sass'
 gem 'seed_dump'
 gem 'faker'

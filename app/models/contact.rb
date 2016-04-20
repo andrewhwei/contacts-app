@@ -5,7 +5,7 @@ class Contact < ActiveRecord::Base
   end
 
   def full_name
-    full_name = "#{first_name} #{last_name}"
+    full_name = "#{first_name} #{middle_name} #{last_name}"
   end
 
   def add_japanese_prefix
@@ -14,5 +14,9 @@ class Contact < ActiveRecord::Base
 
   def self.find_johns
     Contact.where(first_name: "John")
+  end
+
+  def get_coordinates(address)
+    Geocoder.coordinates(address)
   end
 end
