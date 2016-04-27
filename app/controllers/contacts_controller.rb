@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
   def index
     @contact = Contact.all
+    # @contacts = current_user.contacts
   end
 
   def show
