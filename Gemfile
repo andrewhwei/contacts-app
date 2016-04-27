@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'devise'
 gem 'geocoder'
 gem 'bootstrap-sass'
 gem 'seed_dump'

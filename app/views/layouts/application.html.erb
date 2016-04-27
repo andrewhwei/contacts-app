@@ -8,6 +8,31 @@
 </head>
 <body>
 
+
+<% flash.each do |name, message| %>
+  <div class="alert alert-<%= name %> alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><%= message %></div>
+<% end %>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="/contacts">Contact List</a>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li class="active"><%= link_to "Sign out", "/users/sign_out", method: :delete %></li>
+        <% else %>
+          <li class="active"><%= link_to "Sign up", "/users/sign_up" %></li>
+          <li class="active"><%= link_to "Sign in", "/users/sign_in" %></li>
+        <% end %>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
 <%= yield %>
 
 </body>

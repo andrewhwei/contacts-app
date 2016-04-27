@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'contacts#index'
   get "/contacts", to: 'contacts#index'
   get '/contacts/all_johns', to: 'contacts#all_johns'

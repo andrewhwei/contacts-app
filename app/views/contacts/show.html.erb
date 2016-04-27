@@ -17,11 +17,19 @@
     <td><%= @contact.middle_name %></td>
     <td><%= @contact.last_name %></td>
     <td><%= @contact.email %></td>
-    <td><%= @contact.add_japanese_prefix %></td>
+    <% if @contact.phone_number && @contact.phone_number != "" %>
+        <td><%= @contact.add_japanese_prefix %></td>
+    <% else %>
+        <td></td>
+    <% end %>
     <td><%= @contact.friendly_updated_at %></td>
     <td><%= @contact.bio %></td>
-    <th><%= @contact.address %></th>
-    <th><%= "[#{@contact.latitude}, #{@contact.longitude}]" %></th>
+    <td><%= @contact.address %></td>
+    <% if @contact.address && @contact.address != "" %>
+        <td><%= "[#{@contact.latitude}, #{@contact.longitude}]" %></td>
+    <% else %>
+        <td></td>
+    <% end %>
   </tr>
 </table>
 
