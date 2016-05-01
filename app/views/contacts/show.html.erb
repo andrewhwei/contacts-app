@@ -11,6 +11,7 @@
     <th>Bio</th>
     <th>Address</th>
     <th>Coordinates</th>
+    <th>Groups</th>
   </tr>
   <tr>
     <td><%= @contact.first_name %></td>
@@ -30,6 +31,11 @@
     <% else %>
         <td></td>
     <% end %>
+    <td>
+        <% @contact.groups.each do |group| %>
+            <%= group.name %>
+        <% end %>
+    </td>
   </tr>
 </table>
 
